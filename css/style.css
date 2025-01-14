@@ -2,17 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #f5f5dc;
 }
 
 .logo-icon {
   border: 1px solid;
   height: 50px;
   width: 50px;
-  background-image: url(https://picsum.photos/200);
   background-size: cover;
   border-radius: 100%;
 }
-
+.logo-icon img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
 
 nav a {
   border: 1px solid;
@@ -22,11 +26,10 @@ nav a {
   border-radius: 10px;
   margin: 5px;
   font-family: sans-serif;
-  
 }
-nav a:hover{
-    background-color: bisque;
-    color: white;
+nav a:hover {
+  background-color: greenyellow;
+  color: white;
 }
 
 .banner-image {
@@ -36,11 +39,99 @@ nav a:hover{
   background-size: cover;
   background-position: center;
 }
-.content {
-  height: 500px;
+.content-1 {
+  height: 1200px;
   border: 1px solid;
+  background-color: aliceblue;
 }
+.content-2{
+  height: 800px;
+  border: 1px solid;
+  background-color: aliceblue;
+}
+.content-3{
+  height: 800px;
+  border: 1px solid;
+  background-color: aliceblue;
+}
+
+.profil {
+  text-align: center;
+  color: #4d4d4d;
+}
+.profil h1 span:before{
+  content: "";
+  animation: gerak infinite 8s ease;
+  transform: translateY(-50%);
+  color: blue;
+  font-size: 70px;
+}
+@keyframes gerak {
+  0% {
+    content: "Selamat Datang";
+  }
+  50% {
+    content: "Saya Erwin Setya Pambudi";
+  }
+  100% {
+    content: "Terimakasih Sudah Singgah";
+  }
+}
+.box-pendidikan {
+  text-align: center;
+  margin-top: 40px;
+  color: #4d4d4d;
+  align-content: center;
+}
+.box-kiri,
+.box-tengah,
+.box-kanan,
+.box-kanan1 {
+  width: 300px;
+  height: 320px;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 70px 20px 20px 40px;
+  float: left;
+  border-radius: 10px;
+}
+.box-pendidikan img {
+  width: 200px;
+  height: 180px;
+  border-radius: 100%;
+}
+
+.box-kiri:hover,
+.box-tengah:hover,
+.box-kanan:hover,
+.box-kanan1:hover {
+  background-color: #3b5999;
+  color: white;
+}
+.box-pendidikan h3,
+p {
+  margin-top: 10px;
+  margin-bottom: 13px;
+  padding: 0px 20px;
+}
+
+.profil img {
+  height: 300px;
+  width: 250px;
+  border-radius: 20%;
+  margin-top: 50px;
+  border: 5px solid white;
+}
+
 footer {
   text-align: center;
   margin: 10px;
+}
+.user-greeting {
+  font-size: 30px;
+  font-weight: bold;
+  color: green;
+}
+.ucapan-awal {
+  font-family: sans-serif;
 }
