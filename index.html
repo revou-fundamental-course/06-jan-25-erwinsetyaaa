@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Link CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Link JS -->
+    <script src="js/script.js"></script>
+    
     <title>Portfolio</title>
   </head>
   <body>
+    
+    
     <!-- Logo & Navigation -->
     <header class="main-header">
       <!-- Logo -->
@@ -31,22 +36,37 @@
     <main>
       <!-- Home Page -->
       <section>
-        <header id="home-page">
+        
+
+        <header >
           <h2>
-            Hi <span class="user-greeting">User</span>, Welcome to our website
+            Hi <span id="nama"></span>, Welcome to our website
             guys!
           </h2>
+          <script>
+            let name = prompt("Siapakah nama anda?");
+            document.getElementById("nama").innerHTML = name;
+        </script>
+          
           <p>
             Hallo! Salam kenal dari saya, semoga kamu sehat dan sukses selalu
             ya! Jangan lupa bahagia dan tetap semangat dalam menjalani hari ini.
             Semoga harimu menyenangkan dan penuh keberkahan. Aamiin.
           </p>
         </header>
-        <div class="banner-image">
+        <div>
+          <img class="img-slideshow" src=" https://mediaindonesia.com/cdn-cgi/image/width=1200,quality=80,format=webp/https://asset.mediaindonesia.com/news/2024/09/09/1725887543_e335422ccdb383450c07.jpg" />
+
+          <img class="img-slideshow" src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Gambar-Pemandangan-Sawah-yang-Indah-.jpg" />
+
+          <img class="img-slideshow" src="https://i.pinimg.com/736x/eb/22/10/eb221043823c155e62ec7aaad5eb9844.jpg" />
+
+          <button class="tombol" onclick="plusDivs(-1)">Previous</button>
+          <button class="tombol" onclick="plusDivs(1)">Next</button>
 
         </div>
       </section>
-
+      
       <!-- Our Profile -->
       <section>
         <!-- Title -->
@@ -116,18 +136,50 @@
           <h1>Message Us</h1>
         </header>
         <div class="content-3">
+          <div class="feedback">
           <form action="" method="POST">
-            <tr>
-              <td>Nama</td>
-              <td><input type="text"></td>
-            </tr>
-            <tr>
-              <td> Tanggal Lahir</td>
-              <td><input type="date"></td>
-            </tr>
-            
+            <table>
+              
+              <tr>
+                <td>Nama </td>
+                <td>:</td>
+                <td><input type="text" id="name" placeholder="masukan namamu"></td>
+              </tr>
+        
+              <tr>
+                <td>Tanggal Lahir </td>
+                <td>:</td>
+                <td><input type="date" id="tgl-lahir" ></td>
+              </tr>
+              
+              <tr>
+                <td>Jenis Kelamin</td>
+                <td>:</td>
+                <td><input type="radio" name="j-k">Laki-Laki
+                <input type="radio" name="j-k">Perempuan
+              </td>
+              </tr>
+              <tr>
+                <td>Pesan</td>
+                <td>:</td>
+                <td><textarea name="pesan" id="pesan" cols="30" rows="5" placeholder="Masukan pesanmu disini"></textarea></td>
 
-          </form>
+              </tr>
+              <br>
+              <tr class="submit">
+                <td><input type="submit" name="submit" value="submit"></td>
+              </tr>
+
+            </table>
+          </div>
+          <br>
+          <div class="message-feedback">
+            <table>
+              <tr>
+                <td><textarea name="m-f"  cols="60" rows="30"></textarea></td>
+              </tr>
+            </table>
+          </div>
         </div>
       </section>
     </main>

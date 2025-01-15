@@ -32,11 +32,10 @@ nav a:hover {
   color: white;
 }
 
-.banner-image {
+.img-slideshow {
   border: 1px solid;
   height: 450px;
-  background-image: url(https://picsum.photos/1000);
-  background-size: cover;
+  width: 100%;
   background-position: center;
 }
 .content-1 {
@@ -44,22 +43,23 @@ nav a:hover {
   border: 1px solid;
   background-color: aliceblue;
 }
-.content-2{
+.content-2 {
   height: 800px;
   border: 1px solid;
   background-color: aliceblue;
 }
-.content-3{
+.content-3 {
   height: 800px;
   border: 1px solid;
   background-color: aliceblue;
+  padding: 20px;
 }
 
 .profil {
   text-align: center;
   color: #4d4d4d;
 }
-.profil h1 span:before{
+.profil h1 span:before {
   content: "";
   animation: gerak infinite 8s ease;
   transform: translateY(-50%);
@@ -134,4 +134,33 @@ footer {
 }
 .ucapan-awal {
   font-family: sans-serif;
+}
+@media only screen and (max-width: 600px) {
+  .main-header {
+    flex-direction: column;
+  }
+  .logo-icon nav {
+    width: 100%;
+    flex-direction: column;
+  }
+  .logo-icon {
+    margin-bottom: 14px;
+  }
+  .box-pendidikan {
+    width: 50%;
+    flex-direction: column;
+  }
+}
+.tombol{
+ background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
 }
