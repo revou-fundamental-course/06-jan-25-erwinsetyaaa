@@ -26,7 +26,6 @@
       <nav>
         <a href="#home-page">Home</a>
         <a href="#our-profile">Our Profile</a>
-        <a href="#portofolio">Portofolio</a>
         <a href="#message-us">Message Us</a>
       </nav>
     </header>
@@ -61,8 +60,8 @@
 
           <img class="img-slideshow" src="https://i.pinimg.com/736x/eb/22/10/eb221043823c155e62ec7aaad5eb9844.jpg" />
 
-          <button class="tombol" onclick="plusDivs(-1)">Previous</button>
-          <button class="tombol" onclick="plusDivs(1)">Next</button>
+          <button class="tombol" onclick="nextBanner(-1)">Previous</button>
+          <button class="tombol" onclick="nextBanner(1)">Next</button>
 
         </div>
       </section>
@@ -122,65 +121,69 @@
         
       </section>
 
-      <!-- Portofolio -->
-      <section>
-        <header id="portofolio">
-          <h1>Portofolio</h1>
-        </header>
-        <div class="content-2"></div>
-      </section>
-
       <!-- Message Us -->
-      <section>
-        <header id="message-us">
-          <h1>Message Us</h1>
-        </header>
+      <section id="message-us">
+        <h2>Message Us</h2>
+
         <div class="content-3">
-          <div class="feedback">
-          <form action="" method="POST">
-            <table>
-              
-              <tr>
-                <td>Nama </td>
-                <td>:</td>
-                <td><input type="text" id="name" placeholder="masukan namamu"></td>
-              </tr>
-        
-              <tr>
-                <td>Tanggal Lahir </td>
-                <td>:</td>
-                <td><input type="date" id="tgl-lahir" ></td>
-              </tr>
-              
-              <tr>
-                <td>Jenis Kelamin</td>
-                <td>:</td>
-                <td><input type="radio" name="j-k">Laki-Laki
-                <input type="radio" name="j-k">Perempuan
-              </td>
-              </tr>
-              <tr>
-                <td>Pesan</td>
-                <td>:</td>
-                <td><textarea name="pesan" id="pesan" cols="30" rows="5" placeholder="Masukan pesanmu disini"></textarea></td>
 
-              </tr>
-              <br>
-              <tr class="submit">
-                <td><input type="submit" name="submit" value="submit"></td>
-              </tr>
+          <form action="" method="post" required>
 
-            </table>
-          </div>
-          <br>
-          <div class="message-feedback">
-            <table>
+            <div class="form-name">
+              <table>
               <tr>
-                <td><textarea name="m-f"  cols="60" rows="30"></textarea></td>
+                <td for="name-input">Nama  :</td>
+                <td><input type="text" name="name-input" id="name-input" placeholder="Enter Your Name" required></td>
               </tr>
             </table>
+            </div>
+
+            <div class="form-date">
+              <table>
+              <tr>
+                <td for="date-input">Tanggal Lahir  :</td>
+                <td><input type="date" name="date-input" id="date-input" required></td>
+              </tr>
+              </table>
+            </div>
+
+            <div class="form-gender">
+              <table>
+                <tr>
+                  <td for="gender-input" >Jenis Kelamin  :</td>
+            
+                  <td><input type="radio"  name="gender-input" id="gender-input" value="Laki-Laki" required >Laki Laki</td>
+                  
+                  <td><input type="radio" name="gender-input" id="gender-input" value="Perempuan">Perempuan </td>
+                </tr>
+              </table>
+            </div>
+            
+            <div>
+              <table>
+                <tr>
+                  <td for="message-input"> Pesan   : </td>
+                  <td><textarea name="message-input" id="message-input" required placeholder="Insert your Message"></textarea></td>
+
+                </tr>
+              </table>
+            </div>
+
+             
+            
+            <button type="button" onclick="formValidation()">Submit</button>
+          </form>
+          
+          <div class="message-output">
+            <p><strong>Nama :</strong> <span id="output-name"></span></p>
+            <p><strong>Tanggal Lahir :</strong> <span id="output-date"></span></p>
+            <p><strong>Jenis Kelamin :</strong> <span id="output-gender"></span></p>
+            <p><strong>Pesan:</strong> <span id="output-message"></span></p>
+
           </div>
+
         </div>
+        
       </section>
     </main>
 
